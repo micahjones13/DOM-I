@@ -50,6 +50,21 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // let nav = document.querySelector('nav');
 let navItem = document.querySelectorAll('nav a');
+let nav = document.querySelector('nav');
+let newNavItem = document.createElement('a');
+let newNavItem2 = document.createElement('a');
+newNavItem.style.color = 'green';
+newNavItem2.style.color = 'green';
+// const newNavItem = document.createElement('nav a');
+newNavItem.textContent = "Testimonials";
+nav.appendChild(newNavItem); 
+newNavItem2.textContent = "Careers";
+nav.appendChild(newNavItem2);
+//change it to be green
+navItem.forEach(function(item){
+  item.style.color = 'green';
+  
+})
 navItem[0].textContent = siteContent.nav["nav-item-1"];
 navItem[1].textContent = siteContent.nav["nav-item-2"];
 navItem[2].textContent = siteContent.nav["nav-item-3"];
