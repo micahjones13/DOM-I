@@ -60,17 +60,19 @@ newNavItem.textContent = "Testimonials";
 nav.appendChild(newNavItem); 
 newNavItem2.textContent = "Careers";
 nav.appendChild(newNavItem2);
+let count = 1;
 //change it to be green
 navItem.forEach(function(item){
   item.style.color = 'green';
-  
+  item.textContent = siteContent.nav[`nav-item-${count}`]
+  count++;
 })
-navItem[0].textContent = siteContent.nav["nav-item-1"];
-navItem[1].textContent = siteContent.nav["nav-item-2"];
-navItem[2].textContent = siteContent.nav["nav-item-3"];
-navItem[3].textContent = siteContent.nav["nav-item-4"];
-navItem[4].textContent = siteContent.nav["nav-item-5"];
-navItem[5].textContent = siteContent.nav["nav-item-6"];
+// navItem[0].textContent = siteContent.nav["nav-item-1"];
+// navItem[1].textContent = siteContent.nav["nav-item-2"];
+// navItem[2].textContent = siteContent.nav["nav-item-3"];
+// navItem[3].textContent = siteContent.nav["nav-item-4"];
+// navItem[4].textContent = siteContent.nav["nav-item-5"];
+// navItem[5].textContent = siteContent.nav["nav-item-6"];
 //cta
 let ctaH1 = document.querySelector(".cta h1");
 ctaH1.textContent = siteContent.cta.h1;
